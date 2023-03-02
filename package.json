@@ -1,0 +1,21 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "description": "- Upadte profile picture",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IsmailBHIHI/playwright.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IsmailBHIHI/playwright/issues"
+  },
+  "homepage": "https://github.com/IsmailBHIHI/playwright#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.31.1"
+  }
+}
