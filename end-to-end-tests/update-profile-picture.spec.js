@@ -30,13 +30,12 @@ test.describe('Welcome to the ', () => {
 
     await expect(page).toHaveURL('https://www.welcometothejungle.com/fr/me/settings/account')
 
-    await fileInput.setInputFiles('./end-to-end-tests/profile.png')
+    await fileInput.setInputFiles('./playwright-main/end-to-end-tests/profile.png')
 
     await save.click()
-
+    
     //'Mise à jour réussie !'
     //Vos informations personnelles ont bien été mises à jour.
-
     await status.isVisible()
 
     await page.pause();
