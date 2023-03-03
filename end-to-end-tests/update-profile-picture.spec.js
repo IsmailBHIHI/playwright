@@ -15,7 +15,7 @@ test.describe('Welcome to the ', () => {
     const userCard = page.locator('[data-testid=\"home-connected-user-card\"]')
     const save = page.locator('[data-testid="account-edit-button-submit\"]')
     const fileInput = page.locator('input[type=\"file\"]').first()
-    const status = page.locator('div[role=\"status\"]', { hasText: "Vos informations personnelles sont bien été mises à jour." })
+    const status = page.locator('#avatar > div > img')
 
     // Expect a title "to contain" a substring.
     await expect(page).toHaveURL('https://www.welcometothejungle.com/fr/signin');
@@ -30,15 +30,11 @@ test.describe('Welcome to the ', () => {
 
     await expect(page).toHaveURL('https://www.welcometothejungle.com/fr/me/settings/account')
 
-    await fileInput.setInputFiles('./playwright-main/end-to-end-tests/profile.png')
+    await fileInput.setInputFiles('./playwright-main/end-to-end-tests/fixtures/profile.png')
 
     await save.click()
     
-    //'Mise à jour réussie !'
-    //Vos informations personnelles ont bien été mises à jour.
-    await status.isVisible()
-
-    await page.pause();
+    await page.pause()
 
   })
 });
