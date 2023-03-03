@@ -37,7 +37,7 @@ test.describe('Welcome to the Jungle https://www.inqom.com/solutions/cabinet-com
     await expect(page.getByText('Ma présence sur internet')).toBeVisible()
 
     // update profile picture and save.
-    await fileInput.setInputFiles('./playwright-main/end-to-end-tests/fixtures/profile.png')
+    await fileInput.setInputFiles('./end-to-end-tests/fixtures/profile.png')
     await save.click()
     await page.waitForTimeout(3000)
 
