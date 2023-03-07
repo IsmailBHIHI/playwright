@@ -39,7 +39,7 @@ test.describe('Welcome to the Jungle https://www.inqom.com/solutions/cabinet-com
     // update profile picture and save.
     await fileInput.setInputFiles('./end-to-end-tests/fixtures/profile.png')
     await save.click()
-    await page.waitForTimeout(3000)
+    await page.waitForEvent('load')
 
     //Assertions that the new profile picture is here and we the old data are present.
     await expect(page.getByLabel('Je suis un homme')).toBeChecked();
